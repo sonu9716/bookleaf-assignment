@@ -1,0 +1,340 @@
+{
+  "admins": [
+    {
+      "name": "Priya Sharma",
+      "email": "priya.sharma@bookleaf.in",
+      "password": "bookleaf123",
+      "role": "admin"
+    },
+    {
+      "name": "Rahul Mehta",
+      "email": "rahul.mehta@bookleaf.in",
+      "password": "bookleaf123",
+      "role": "admin"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Anika Desai",
+      "email": "anika.desai@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Whispers of the Ganges",
+          "isbn": "978-93-51234-01-1",
+          "genre": "Literary Fiction",
+          "publicationDate": "2023-06-15",
+          "status": "Published",
+          "mrp": 399,
+          "totalCopiesSold": 4520,
+          "totalRoyaltyEarned": 135600,
+          "royaltyPaid": 108480,
+          "royaltyPending": 27120,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Flipkart", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "The Saffron Diaries",
+          "isbn": "978-93-51234-02-8",
+          "genre": "Historical Fiction",
+          "publicationDate": "2024-11-20",
+          "status": "In Production",
+          "mrp": 499,
+          "totalCopiesSold": 0,
+          "totalRoyaltyEarned": 0,
+          "royaltyPaid": 0,
+          "royaltyPending": 0,
+          "distributionPlatforms": [],
+          "productionStage": "Cover Design"
+        }
+      ]
+    },
+    {
+      "name": "Vikram Joshi",
+      "email": "vikram.joshi@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Code & Karma",
+          "isbn": "978-93-51234-03-5",
+          "genre": "Thriller",
+          "publicationDate": "2023-03-10",
+          "status": "Published",
+          "mrp": 350,
+          "totalCopiesSold": 8900,
+          "totalRoyaltyEarned": 222500,
+          "royaltyPaid": 222500,
+          "royaltyPending": 0,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Flipkart", "BookLeaf Store", "Kindle"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Bengaluru Nights",
+          "isbn": "978-93-51234-04-2",
+          "genre": "Contemporary Fiction",
+          "publicationDate": "2024-08-05",
+          "status": "Published",
+          "mrp": 299,
+          "totalCopiesSold": 2150,
+          "totalRoyaltyEarned": 48375,
+          "royaltyPaid": 32250,
+          "royaltyPending": 16125,
+          "distributionPlatforms": ["Amazon IN", "Flipkart", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        }
+      ]
+    },
+    {
+      "name": "Meera Krishnan",
+      "email": "meera.krishnan@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Monsoon Melodies",
+          "isbn": "978-93-51234-05-9",
+          "genre": "Poetry",
+          "publicationDate": "2024-01-12",
+          "status": "Published",
+          "mrp": 250,
+          "totalCopiesSold": 1200,
+          "totalRoyaltyEarned": 21600,
+          "royaltyPaid": 21600,
+          "royaltyPending": 0,
+          "distributionPlatforms": ["Amazon IN", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        }
+      ]
+    },
+    {
+      "name": "Arjun Malhotra",
+      "email": "arjun.malhotra@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "The Last Mughal's Garden",
+          "isbn": "978-93-51234-06-6",
+          "genre": "Historical Fiction",
+          "publicationDate": "2022-09-01",
+          "status": "Published",
+          "mrp": 599,
+          "totalCopiesSold": 12400,
+          "totalRoyaltyEarned": 558000,
+          "royaltyPaid": 446400,
+          "royaltyPending": 111600,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Amazon UK", "Flipkart", "BookLeaf Store", "Kindle"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Silk Route Secrets",
+          "isbn": "978-93-51234-07-3",
+          "genre": "Adventure",
+          "publicationDate": "2024-05-18",
+          "status": "Published",
+          "mrp": 450,
+          "totalCopiesSold": 3600,
+          "totalRoyaltyEarned": 121500,
+          "royaltyPaid": 81000,
+          "royaltyPending": 40500,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Flipkart", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Echoes of Empire",
+          "isbn": null,
+          "genre": "Historical Fiction",
+          "publicationDate": null,
+          "status": "In Production",
+          "mrp": 549,
+          "totalCopiesSold": 0,
+          "totalRoyaltyEarned": 0,
+          "royaltyPaid": 0,
+          "royaltyPending": 0,
+          "distributionPlatforms": [],
+          "productionStage": "Editing"
+        }
+      ]
+    },
+    {
+      "name": "Sunita Rao",
+      "email": "sunita.rao@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Spice & Everything Nice",
+          "isbn": "978-93-51234-08-0",
+          "genre": "Non-Fiction",
+          "publicationDate": "2023-12-01",
+          "status": "Published",
+          "mrp": 699,
+          "totalCopiesSold": 6800,
+          "totalRoyaltyEarned": 340000,
+          "royaltyPaid": 272000,
+          "royaltyPending": 68000,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Flipkart", "BookLeaf Store", "Kindle"],
+          "productionStage": "Published & Live"
+        }
+      ]
+    },
+    {
+      "name": "Karthik Nair",
+      "email": "karthik.nair@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Quantum Dreams",
+          "isbn": "978-93-51234-09-7",
+          "genre": "Science Fiction",
+          "publicationDate": "2024-03-22",
+          "status": "Published",
+          "mrp": 425,
+          "totalCopiesSold": 5100,
+          "totalRoyaltyEarned": 153000,
+          "royaltyPaid": 122400,
+          "royaltyPending": 30600,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "BookLeaf Store", "Kindle"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Neural Uprising",
+          "isbn": "978-93-51234-10-3",
+          "genre": "Science Fiction",
+          "publicationDate": null,
+          "status": "In Production",
+          "mrp": 475,
+          "totalCopiesSold": 0,
+          "totalRoyaltyEarned": 0,
+          "royaltyPaid": 0,
+          "royaltyPending": 0,
+          "distributionPlatforms": [],
+          "productionStage": "Typesetting"
+        }
+      ]
+    },
+    {
+      "name": "Fatima Khan",
+      "email": "fatima.khan@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Beyond the Veil",
+          "isbn": "978-93-51234-11-0",
+          "genre": "Literary Fiction",
+          "publicationDate": "2024-07-14",
+          "status": "Published",
+          "mrp": 375,
+          "totalCopiesSold": 3200,
+          "totalRoyaltyEarned": 84000,
+          "royaltyPaid": 67200,
+          "royaltyPending": 16800,
+          "distributionPlatforms": ["Amazon IN", "Flipkart", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        }
+      ]
+    },
+    {
+      "name": "Ravi Patel",
+      "email": "ravi.patel@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "The Chai Chronicles",
+          "isbn": "978-93-51234-12-7",
+          "genre": "Humor",
+          "publicationDate": "2023-10-05",
+          "status": "Published",
+          "mrp": 299,
+          "totalCopiesSold": 7600,
+          "totalRoyaltyEarned": 159600,
+          "royaltyPaid": 159600,
+          "royaltyPending": 0,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Flipkart", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Startup Shenanigans",
+          "isbn": "978-93-51234-13-4",
+          "genre": "Humor",
+          "publicationDate": null,
+          "status": "In Production",
+          "mrp": 349,
+          "totalCopiesSold": 0,
+          "totalRoyaltyEarned": 0,
+          "royaltyPaid": 0,
+          "royaltyPending": 0,
+          "distributionPlatforms": [],
+          "productionStage": "Proofreading"
+        }
+      ]
+    },
+    {
+      "name": "Deepa Iyer",
+      "email": "deepa.iyer@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "Temple of Shadows",
+          "isbn": "978-93-51234-14-1",
+          "genre": "Mystery",
+          "publicationDate": "2024-02-28",
+          "status": "Published",
+          "mrp": 425,
+          "totalCopiesSold": 4100,
+          "totalRoyaltyEarned": 123000,
+          "royaltyPaid": 98400,
+          "royaltyPending": 24600,
+          "distributionPlatforms": ["Amazon IN", "Flipkart", "BookLeaf Store"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Shadows of the Ghats",
+          "isbn": null,
+          "genre": "Mystery",
+          "publicationDate": null,
+          "status": "In Production",
+          "mrp": 399,
+          "totalCopiesSold": 0,
+          "totalRoyaltyEarned": 0,
+          "royaltyPaid": 0,
+          "royaltyPending": 0,
+          "distributionPlatforms": [],
+          "productionStage": "Typesetting"
+        }
+      ]
+    },
+    {
+      "name": "Siddharth Gupta",
+      "email": "siddharth.gupta@email.com",
+      "password": "bookleaf123",
+      "books": [
+        {
+          "title": "The Algorithm of Love",
+          "isbn": "978-93-51234-15-8",
+          "genre": "Romance",
+          "publicationDate": "2024-06-20",
+          "status": "Published",
+          "mrp": 325,
+          "totalCopiesSold": 9200,
+          "totalRoyaltyEarned": 207000,
+          "royaltyPaid": 165600,
+          "royaltyPending": 41400,
+          "distributionPlatforms": ["Amazon IN", "Amazon US", "Flipkart", "BookLeaf Store", "Kindle"],
+          "productionStage": "Published & Live"
+        },
+        {
+          "title": "Digital Hearts",
+          "isbn": "978-93-51234-16-5",
+          "genre": "Romance",
+          "publicationDate": null,
+          "status": "In Production",
+          "mrp": 375,
+          "totalCopiesSold": 0,
+          "totalRoyaltyEarned": 0,
+          "royaltyPaid": 0,
+          "royaltyPending": 0,
+          "distributionPlatforms": [],
+          "productionStage": "ISBN Assignment"
+        }
+      ]
+    }
+  ]
+}
