@@ -37,10 +37,11 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'healthy', timestamp: new Date() });
 });
 
-// Serve frontend static files in production
+// Serve frontend static files (when dist exists, i.e., after build)
 const path = require('path');
-if (process.env.NODE_ENV === 'production') {
-  const frontendDist = path.join(__dirname, '../../frontend/dist');
+const fs = require('fs');
+const frontendDist = path.join(__dirname, '../../frontend/dist');
+if (fs.existsSync(frontendDist)) {
   app.use(express.static(frontendDist));
   
   // Handle client-side routing — serve index.html for all non-API routes
