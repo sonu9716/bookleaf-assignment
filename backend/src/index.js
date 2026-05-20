@@ -37,6 +37,18 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'healthy', timestamp: new Date() });
 });
 
+// Serve frontend static files in production
+const path = require('path');
+if (process.env.NODE_ENV === 'production') {
+  const frontendDist = path.join(__dirname, '../../frontend/dist');
+  app.use(express.static(frontendDist));
+  
+  // Handle client-side routing — serve index.html for all non-API routes
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  });
+}
+
 // Centralized Error Handling
 app.use(errorHandler);
 

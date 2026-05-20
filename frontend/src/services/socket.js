@@ -5,7 +5,7 @@ let socket = null;
 export const connectSocket = (token) => {
   if (socket?.connected) return socket;
   
-  const WS_URL = import.meta.env.VITE_WS_URL || 'http://localhost:5000';
+  const WS_URL = import.meta.env.VITE_WS_URL || undefined;
   
   socket = io(WS_URL, {
     auth: { token },
