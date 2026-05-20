@@ -9,7 +9,7 @@ An intelligent full-stack MERN application (MongoDB, Express, React, Node) built
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v16+ recommended)
 - [MongoDB](https://www.mongodb.com/) (running locally or via Atlas)
-- [OpenAI API Key](https://platform.openai.com/) (Optional; for AI classification and auto-drafts. The system gracefully degrades if not supplied).
+- [Groq API Key](https://console.groq.com/) (Optional; for AI classification and auto-drafts. The system gracefully degrades if not supplied).
 
 ### Installation
 
@@ -30,7 +30,7 @@ An intelligent full-stack MERN application (MongoDB, Express, React, Node) built
    ```bash
    cp .env.example .env
    ```
-   Provide your `OPENAI_API_KEY` (if available) in `.env` and start the server:
+   Provide your `GROQ_API_KEY` (if available) in `.env` and start the server:
    ```bash
    npm run dev
    ```
@@ -69,13 +69,13 @@ graph TD
   A[Author Client - React] <-->|Socket.IO / REST| C[Express Backend]
   B[Admin Client - React] <-->|Socket.IO / REST| C
   C <-->|Mongoose ODM| D[(MongoDB)]
-  C -->|OpenAI Node SDK| E[OpenAI API gpt-4o-mini]
+  C -->|Groq Node SDK| E[Groq API llama-3.3-70b-versatile]
 ```
 
 ### Key Technical Details
 - **Decoupled Security**: Clean Separation of Concerns. Author accounts can only read, write, or query **their own** books, tickets, and messages. Admins possess full dashboard queues with override privileges.
 - **Real-Time Engine**: Built on Socket.IO. Handshake verifies JWT. Author replies auto-reopen threads, admin replies auto-update client states, and queue modifications (status, priority) propagate instantly without page reload.
-- **Dedicated AI Service**: Built using OpenAI Node SDK. Auto-classifies tickets upon submission and generates context-aware, highly polite drafts based on live financial ledgers and BookLeaf operational policy.
+- **Dedicated AI Service**: Built using Groq Node SDK. Auto-classifies tickets upon submission and generates context-aware, highly polite drafts based on live financial ledgers and BookLeaf operational policy.
 
 ---
 
@@ -83,7 +83,7 @@ graph TD
 
 The system integrates a dedicated, production-ready `AIService` (`backend/src/services/aiService.js`) designed for cost-efficiency, low-latency, and high reliability:
 
-1. **Model Selection**: Uses `gpt-4o-mini` via environment variables. This model provides extremely fast response speeds (under 1.5 seconds), exceptional text classification accuracy, and has incredibly low costs ($0.15/1M input tokens).
+1. **Model Selection**: Uses `llama-3.3-70b-versatile` via Groq environment variables. This model provides extremely fast response speeds, exceptional text classification accuracy, and high cost efficiency.
 2. **Ticket Classification**:
    - **Trigger**: When an author submits a new ticket, the subject and description are parsed.
    - **System Instruction**: Enforces JSON-only response formats, specifying the 6 allowed support categories and 4 priority tiers (with exact rules, such as mapping "missing royalties for 6 months" to High/Critical).
@@ -92,7 +92,7 @@ The system integrates a dedicated, production-ready `AIService` (`backend/src/se
    - **Policy Injection**: Injects the full `BOOKLEAF_KNOWLEDGE_BASE` policy (including quarterly schedules, trim sizing, 70 GSM Cream paper natural shades, distribution availability, and manufacturing replacements).
    - **Empathetic Guidelines**: Enforces specific communication tone rules (always greeting authors by name, owning BookLeaf mistakes directly, apologizing without deflection, providing concrete timelines, and concluding with next actions).
    - **Token Efficiency**: Instead of sending full user histories or massive raw database dumps, it passes a compiled compact text summary of the book's current financials, production stage, and only the *last 3* messages in the conversation.
-4. **Graceful Degradation**: If no API key is specified, or if OpenAI is down (5xx errors or network timeouts), the service catches the error:
+4. **Graceful Degradation**: If no API key is specified, or if Groq is down (5xx errors or network timeouts), the service catches the error:
    - Sets ticket classification to `'General Inquiry'` and priority to `'Medium'` with `0.5` confidence using local heuristics.
    - Returns a helpful notice in the admin draft textarea ("AI drafts are currently offline, write reply manually").
    - **Critical Rule**: Ticket creation, updates, and messaging are NEVER blocked by AI outages.
