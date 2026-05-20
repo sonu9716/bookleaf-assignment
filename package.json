@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "BookLeaf Publishing - Author Support & Communication Portal",
   "scripts": {
-    "install:all": "cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm run build",
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
     "start": "cd backend && npm start",
-    "seed": "cd backend && npm run seed",
-    "render-build": "npm run install:all && npm run build"
+    "seed": "cd backend && npm run seed"
   }
 }
