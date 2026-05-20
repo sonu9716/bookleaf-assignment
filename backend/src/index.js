@@ -37,6 +37,17 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'healthy', timestamp: new Date() });
 });
 
+// One-click remote database seeding (bypasses local network blocks)
+app.get('/api/seed', (req, res) => {
+  const { exec } = require('child_process');
+  exec('npm run seed', { cwd: __dirname + '/../' }, (error, stdout, stderr) => {
+    if (error) {
+      return res.status(500).json({ error: 'Seeding failed', details: stderr || error.message });
+    }
+    res.status(200).json({ success: true, message: 'Database seeded successfully!', output: stdout });
+  });
+});
+
 // Serve frontend static files (when dist exists, i.e., after build)
 const path = require('path');
 const fs = require('fs');
